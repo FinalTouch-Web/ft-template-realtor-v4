@@ -60,7 +60,7 @@ export function Hero() {
               <span className="eyebrow">An Introduction</span>
             </div>
 
-            <h1 className="display-light text-[clamp(2.75rem,11vw,11rem)] text-bone leading-[0.92]">
+            <h1 className="display-light text-[clamp(2.5rem,10vw,11rem)] text-bone leading-[0.92]">
               The quiet side
               <br />
               of Calgary
@@ -74,7 +74,7 @@ export function Hero() {
                 judgement over theatrics. Fifteen years, four hundred and fifty
                 homes, one number: hers.
               </p>
-              <div className="lg:col-span-6 flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-5 border-t border-gold/40 pt-5">
+              <div className="lg:col-span-6 flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-5 border-t border-gold/40 pt-5 min-w-0">
                 <div>
                   <span className="eyebrow block mb-2">Direct</span>
                   <a

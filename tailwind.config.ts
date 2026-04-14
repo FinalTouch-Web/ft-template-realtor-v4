@@ -10,21 +10,21 @@ export default {
       },
       colors: {
         obsidian: {
-          DEFAULT: "#0c0a08",
-          900: "#14110d",
-          800: "#1a1612",
-          700: "#221d17",
-          rule: "#2f2820",
+          DEFAULT: "rgb(var(--color-obsidian) / <alpha-value>)",
+          900: "rgb(var(--color-obsidian-900) / <alpha-value>)",
+          800: "rgb(var(--color-obsidian-800) / <alpha-value>)",
+          700: "rgb(var(--color-obsidian-700) / <alpha-value>)",
+          rule: "rgb(var(--color-obsidian-rule) / <alpha-value>)",
         },
         bone: {
-          DEFAULT: "#f0e8d4",
-          muted: "#a89c82",
-          faint: "#6b6354",
+          DEFAULT: "rgb(var(--color-bone) / <alpha-value>)",
+          muted: "rgb(var(--color-bone-muted) / <alpha-value>)",
+          faint: "rgb(var(--color-bone-faint) / <alpha-value>)",
         },
         gold: {
-          DEFAULT: "#c9a46b",
-          600: "#b18d56",
-          400: "#d9b982",
+          DEFAULT: "rgb(var(--color-gold) / <alpha-value>)",
+          600: "rgb(var(--color-gold-600) / <alpha-value>)",
+          400: "rgb(var(--color-gold-400) / <alpha-value>)",
         },
       },
       letterSpacing: {

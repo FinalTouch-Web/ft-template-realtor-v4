@@ -8,9 +8,9 @@ import { Neighbourhoods } from "@/components/neighbourhoods";
 import { Testimonials } from "@/components/testimonials";
 import { CTA } from "@/components/cta";
 
-export default function HomePage() {
+export default function V2Page() {
   return (
-    <div className="grain-v1">
+    <div className="theme-v2 min-h-screen">
       <main>
         <Nav />
         <Hero />
@@ -20,7 +20,7 @@ export default function HomePage() {
         <Stats />
         <Neighbourhoods />
         <Testimonials />
-        <CTA />
+        <CTA fontCredit="Outfit" />
       </main>
     </div>
   );

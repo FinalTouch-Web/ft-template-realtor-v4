@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { agent } from "@/lib/data";
 import { SectionHead } from "./section-head";
 
-export function CTA() {
+export function CTA({ fontCredit = "Cormorant Garamond & Inter" }: { fontCredit?: string }) {
   return (
     <section id="contact" className="border-t border-obsidian-rule">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 md:px-14 py-24 sm:py-28 md:py-40">
@@ -78,9 +78,9 @@ export function CTA() {
                   className="w-full bg-transparent border-b border-obsidian-rule pb-3 pt-1 text-base text-bone placeholder:text-bone-faint focus:outline-none focus:border-gold transition-colors resize-none"
                 />
               </div>
-              <div className="pt-6 border-t border-obsidian-rule flex items-center justify-between">
+              <div className="pt-6 border-t border-obsidian-rule flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <p className="eyebrow-muted">Replies within 24 hours.</p>
-                <button type="button" className="link-gold display-italic text-2xl">
+                <button type="button" className="link-gold display-italic text-2xl shrink-0">
                   Send &rarr;
                 </button>
               </div>
@@ -98,7 +98,7 @@ export function CTA() {
               © {new Date().getFullYear()} Sarah Mitchell &nbsp;·&nbsp; RE/MAX First
             </div>
             <div className="eyebrow-muted">
-              Set in Cormorant Garamond &amp; Inter
+              Set in {fontCredit}
             </div>
           </div>
         </footer>

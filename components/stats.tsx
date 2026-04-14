@@ -82,7 +82,7 @@ export function Stats() {
                 </span>
                 <span className="eyebrow-muted text-right">{c.label}</span>
               </div>
-              <div className="display-light text-[clamp(3rem,11vw,7rem)] text-bone leading-[0.92] mb-6 md:mb-8 break-words">
+              <div className="display-light text-[clamp(2.5rem,10vw,7rem)] text-bone leading-[0.92] mb-6 md:mb-8 break-words">
                 {c.counter !== undefined ? (
                   <Counter to={c.counter} suffix={c.suffix} />
                 ) : (

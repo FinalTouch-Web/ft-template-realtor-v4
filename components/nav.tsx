@@ -111,7 +111,7 @@ export function Nav() {
                       <span className="eyebrow">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="display text-4xl text-bone">{l.label}</span>
+                      <span className="display text-3xl sm:text-4xl text-bone">{l.label}</span>
                     </div>
                     <span className="text-gold">→</span>
                   </a>

@@ -71,7 +71,7 @@ export function Listings() {
           ))}
         </div>
 
-        <div className="mt-24 md:mt-32 pt-6 border-t border-obsidian-rule flex items-baseline justify-between">
+        <div className="mt-24 md:mt-32 pt-6 border-t border-obsidian-rule flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-4">
           <span className="eyebrow-muted">End of Portfolio</span>
           <a href="#" className="link-gold display-italic text-xl">
             The Full Portfolio →

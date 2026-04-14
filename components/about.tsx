@@ -13,7 +13,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="lg:col-span-7 px-5 sm:px-8 md:px-14 lg:px-20 xl:px-28 py-20 sm:py-24 md:py-32 lg:py-40 lg:border-r border-obsidian-rule order-2 lg:order-1"
+          className="lg:col-span-7 xl:col-span-8 px-5 sm:px-8 md:px-14 lg:px-16 xl:px-24 py-20 sm:py-24 md:py-32 lg:py-40 lg:border-r border-obsidian-rule order-2 lg:order-1"
         >
           <div className="flex items-center gap-4 mb-8 md:mb-12">
             <span className="h-px w-16 bg-gold" />
@@ -26,8 +26,9 @@ export function About() {
             <em className="display-italic text-gold">deliberately so</em>.
           </h2>
 
-          <div className="grid md:grid-cols-12 gap-8 md:gap-14">
-            <div className="md:col-span-7 space-y-5 md:space-y-6">
+          {/* Prose + Particulars — side-by-side only at xl+ */}
+          <div className="grid xl:grid-cols-12 gap-10 xl:gap-14">
+            <div className="xl:col-span-7 space-y-5 md:space-y-6">
               <p className="prose-body">
                 Most brokerages are built to scale. Ours is built to listen. I
                 take on a limited number of clients each year &mdash; not because
@@ -46,7 +47,7 @@ export function About() {
                 </p>
               </div>
             </div>
-            <aside className="md:col-span-5 md:pl-8 md:border-l border-obsidian-rule">
+            <aside className="xl:col-span-5 xl:pl-8 xl:border-l border-obsidian-rule pt-8 xl:pt-0 border-t xl:border-t-0">
               <div className="eyebrow mb-6">Particulars</div>
               <dl className="space-y-4 text-sm">
                 <Row label="Designation" value="ABR, SRS" />
@@ -71,7 +72,7 @@ export function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          className="lg:col-span-5 relative order-1 lg:order-2"
+          className="lg:col-span-5 xl:col-span-4 relative order-1 lg:order-2"
         >
           <img
             src={agent.headshot}
@@ -97,7 +98,7 @@ function Row({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-baseline justify-between gap-4 border-b border-obsidian-rule pb-3">
       <dt className="text-bone">{label}</dt>
-      <dd className="text-bone-muted">{value}</dd>
+      <dd className="text-bone-muted text-right">{value}</dd>
     </div>
   );
 }

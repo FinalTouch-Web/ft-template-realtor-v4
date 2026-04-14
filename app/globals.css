@@ -2,15 +2,230 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════
+   V1: Warm Obsidian & Gold — Classic Luxury
+   ═══════════════════════════════════════════════ */
 :root {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  --color-obsidian: 12 10 8;
+  --color-obsidian-900: 20 17 13;
+  --color-obsidian-800: 26 22 18;
+  --color-obsidian-700: 34 29 23;
+  --color-obsidian-rule: 47 40 32;
+
+  --color-bone: 240 232 212;
+  --color-bone-muted: 168 156 130;
+  --color-bone-faint: 107 99 84;
+
+  --color-gold: 201 164 107;
+  --color-gold-600: 177 141 86;
+  --color-gold-400: 217 185 130;
+
+  --color-prose: 201 190 170;
 }
 
+/* ═══════════════════════════════════════════════
+   V2: Lamborghini — Pure Black & Gold
+   ═══════════════════════════════════════════════ */
+.theme-v2 {
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-serif: "Outfit", system-ui, -apple-system, sans-serif;
+
+  --color-obsidian: 0 0 0;
+  --color-obsidian-900: 24 24 24;
+  --color-obsidian-800: 32 32 32;
+  --color-obsidian-700: 42 42 42;
+  --color-obsidian-rule: 51 51 51;
+
+  --color-bone: 255 255 255;
+  --color-bone-muted: 150 150 150;
+  --color-bone-faint: 125 125 125;
+
+  --color-gold: 255 192 0;
+  --color-gold-600: 145 115 0;
+  --color-gold-400: 255 206 62;
+
+  --color-prose: 150 150 150;
+
+  background: rgb(var(--color-obsidian));
+  color: rgb(var(--color-bone));
+}
+
+/* V2: Uppercase display, no italics, single typeface */
+.theme-v2 .display,
+.theme-v2 .display-light {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.theme-v2 .display-italic {
+  font-family: var(--font-sans);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* V2: Eyebrow tweaks — slightly larger, tighter tracking */
+.theme-v2 .eyebrow,
+.theme-v2 .eyebrow-bone,
+.theme-v2 .eyebrow-muted {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+/* V2: Selection */
+.theme-v2 ::selection {
+  background: rgb(var(--color-gold));
+  color: rgb(0 0 0);
+}
+
+/* V2: Responsive overflow protection for uppercase display text */
+.theme-v2 .display,
+.theme-v2 .display-light,
+.theme-v2 .display-italic {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* V2: Tighten hero heading on small screens — uppercase is wider */
+@media (max-width: 639px) {
+  .theme-v2 .display-light,
+  .theme-v2 .display {
+    letter-spacing: -0.03em;
+  }
+}
+
+/* V2: Prose body — bump weight for legibility on pure black */
+.theme-v2 .prose-body {
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════════════════════
+   V3: Clay — Warm Cream & Playful
+   ═══════════════════════════════════════════════ */
+.theme-v3 {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-obsidian: 250 249 247;
+  --color-obsidian-900: 255 255 255;
+  --color-obsidian-800: 245 241 234;
+  --color-obsidian-700: 238 233 223;
+  --color-obsidian-rule: 218 212 200;
+
+  --color-bone: 0 0 0;
+  --color-bone-muted: 159 155 147;
+  --color-bone-faint: 85 83 78;
+
+  --color-gold: 251 189 65;
+  --color-gold-600: 208 138 17;
+  --color-gold-400: 248 204 101;
+
+  --color-prose: 85 83 78;
+
+  background: rgb(var(--color-obsidian));
+  color: rgb(var(--color-bone));
+}
+
+/* V3: Selection */
+.theme-v3 ::selection {
+  background: rgb(var(--color-gold));
+  color: rgb(0 0 0);
+}
+
+/* V3: Display — geometric, punchy, no italic, weight 600 */
+.theme-v3 .display,
+.theme-v3 .display-light {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+}
+.theme-v3 .display-italic {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
+
+/* V3: Eyebrow — Clay uppercase label style */
+.theme-v3 .eyebrow,
+.theme-v3 .eyebrow-bone,
+.theme-v3 .eyebrow-muted {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+}
+
+/* V3: Prose body weight */
+.theme-v3 .prose-body {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* V3: Rounded corners — Clay's generous radius */
+.theme-v3 img {
+  border-radius: 12px;
+}
+.theme-v3 section {
+  border-radius: 0;
+}
+
+/* V3: Remove grayscale/contrast filters — warm & natural photos */
+.theme-v3 img {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* V3: Card surfaces get Clay shadow */
+.theme-v3 .bg-obsidian-900 {
+  box-shadow:
+    rgba(0,0,0,0.1) 0px 1px 1px,
+    rgba(0,0,0,0.04) 0px -1px 1px inset,
+    rgba(0,0,0,0.05) 0px -0.5px 1px;
+}
+
+/* V3: Borders become dashed on secondary dividers */
+.theme-v3 .border-t.border-obsidian-rule,
+.theme-v3 .border-b.border-obsidian-rule {
+  border-style: solid;
+}
+.theme-v3 .divide-obsidian-rule > * + * {
+  border-style: dashed;
+}
+
+/* V3: Link hover with Clay's playful rotation */
+.theme-v3 .link-gold:hover {
+  transform: rotate(-4deg) translateY(-2px);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* V3: Testimonial avatar — square with radius instead of round */
+.theme-v3 .rounded-full {
+  border-radius: 12px;
+}
+
+/* V3: Responsive overflow protection */
+.theme-v3 .display,
+.theme-v3 .display-light,
+.theme-v3 .display-italic {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ═══════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════ */
 html,
 body {
-  background: #0c0a08;
-  color: #f0e8d4;
+  background: rgb(var(--color-obsidian));
+  color: rgb(var(--color-bone));
   font-family: var(--font-sans);
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -19,11 +234,13 @@ body {
 html { scroll-behavior: smooth; }
 
 ::selection {
-  background: #c9a46b;
-  color: #0c0a08;
+  background: rgb(var(--color-gold));
+  color: rgb(var(--color-obsidian));
 }
 
-/* High-contrast Cormorant display */
+/* ═══════════════════════════════════════════════
+   Display Typography
+   ═══════════════════════════════════════════════ */
 .display {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -43,14 +260,16 @@ html { scroll-behavior: smooth; }
   letter-spacing: 0;
 }
 
-/* Wide-tracked small caps */
+/* ═══════════════════════════════════════════════
+   Eyebrow Labels
+   ═══════════════════════════════════════════════ */
 .eyebrow {
   font-family: var(--font-sans);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #c9a46b;
+  color: rgb(var(--color-gold));
 }
 .eyebrow-bone {
   font-family: var(--font-sans);
@@ -58,7 +277,7 @@ html { scroll-behavior: smooth; }
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #f0e8d4;
+  color: rgb(var(--color-bone));
 }
 .eyebrow-muted {
   font-family: var(--font-sans);
@@ -66,7 +285,7 @@ html { scroll-behavior: smooth; }
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #a89c82;
+  color: rgb(var(--color-bone-muted));
 }
 
 .prose-body {
@@ -74,21 +293,25 @@ html { scroll-behavior: smooth; }
   font-size: 16px;
   line-height: 1.75;
   font-weight: 300;
-  color: #c9beaa;
+  color: rgb(var(--color-prose));
 }
 
-/* Gold hairline */
+/* ═══════════════════════════════════════════════
+   Decorative Rules
+   ═══════════════════════════════════════════════ */
 .rule-gold {
-  background: linear-gradient(to right, transparent, #c9a46b 50%, transparent);
+  background: linear-gradient(to right, transparent, rgb(var(--color-gold) / 0.5) 50%, transparent);
   height: 1px;
 }
 
-/* Delicate link underline */
+/* ═══════════════════════════════════════════════
+   Link Underlines
+   ═══════════════════════════════════════════════ */
 .link-gold {
   position: relative;
   display: inline-block;
   padding-bottom: 4px;
-  color: #c9a46b;
+  color: rgb(var(--color-gold));
 }
 .link-gold::after {
   content: "";
@@ -97,7 +320,7 @@ html { scroll-behavior: smooth; }
   bottom: 0;
   width: 100%;
   height: 1px;
-  background: #c9a46b;
+  background: rgb(var(--color-gold));
   transform-origin: right center;
   transform: scaleX(1);
   transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -125,6 +348,9 @@ html { scroll-behavior: smooth; }
 }
 .link-bone:hover::after { opacity: 1; }
 
+/* ═══════════════════════════════════════════════
+   Utilities
+   ═══════════════════════════════════════════════ */
 .scrollbar-hide { scrollbar-width: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 
@@ -133,8 +359,10 @@ html { scroll-behavior: smooth; }
   transform: rotate(180deg);
 }
 
-/* Warm grain noise */
-body::after {
+/* ═══════════════════════════════════════════════
+   Grain Texture Overlay (V1 only)
+   ═══════════════════════════════════════════════ */
+.grain-v1::before {
   content: "";
   position: fixed;
   inset: 0;
