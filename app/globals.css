@@ -105,27 +105,27 @@
 }
 
 /* ═══════════════════════════════════════════════
-   V3: Clay — Warm Cream & Playful
+   V3: Clay — Dark Mode & Playful
    ═══════════════════════════════════════════════ */
 .theme-v3 {
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-serif: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 
-  --color-obsidian: 250 249 247;
-  --color-obsidian-900: 255 255 255;
-  --color-obsidian-800: 245 241 234;
-  --color-obsidian-700: 238 233 223;
-  --color-obsidian-rule: 218 212 200;
+  --color-obsidian: 18 17 15;
+  --color-obsidian-900: 26 25 22;
+  --color-obsidian-800: 32 30 27;
+  --color-obsidian-700: 40 38 34;
+  --color-obsidian-rule: 58 54 47;
 
-  --color-bone: 0 0 0;
+  --color-bone: 245 241 234;
   --color-bone-muted: 159 155 147;
-  --color-bone-faint: 85 83 78;
+  --color-bone-faint: 120 116 108;
 
   --color-gold: 251 189 65;
   --color-gold-600: 208 138 17;
   --color-gold-400: 248 204 101;
 
-  --color-prose: 85 83 78;
+  --color-prose: 180 175 165;
 
   background: rgb(var(--color-obsidian));
   color: rgb(var(--color-bone));
@@ -183,12 +183,12 @@
   -webkit-filter: none !important;
 }
 
-/* V3: Card surfaces get Clay shadow */
+/* V3: Card surfaces get Clay shadow (dark) */
 .theme-v3 .bg-obsidian-900 {
   box-shadow:
-    rgba(0,0,0,0.1) 0px 1px 1px,
-    rgba(0,0,0,0.04) 0px -1px 1px inset,
-    rgba(0,0,0,0.05) 0px -0.5px 1px;
+    rgba(0,0,0,0.5) 0px 1px 2px,
+    rgba(255,255,255,0.04) 0px 1px 0px inset,
+    rgba(0,0,0,0.3) 0px -0.5px 1px;
 }
 
 /* V3: Borders become dashed on secondary dividers */
